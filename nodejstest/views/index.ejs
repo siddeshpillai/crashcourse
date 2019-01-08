@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <div class="row">
+            <div class="col-lg-4"> </div>
+            <div class="col-lg-4">
+                <h1>You searched For : <%= data.userQuery %></h1>                   
+                <% if(data.loggedIn) { %>
+                    <h2> You are logged in as : <%= data.username %> </h2>
+                <% } %>
+                <ul>
+                    <!-- <li><%= data.searchResults[0] %></li>
+                    <li><%= data.searchResults[1] %></li>
+                    <li><%= data.searchResults[2] %></li> -->
+                    <% data.searchResults.forEach(result=>{ %>
+                        <li><%= result %> </li>
+
+                    <%}); %>
+                </ul>
+            </div>
+        </div>
+        
+        <script src="/public/js/example.js"></script>
+    </body>
+</html>
